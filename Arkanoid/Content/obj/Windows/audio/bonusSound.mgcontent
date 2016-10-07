@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/bonusSound.wav</SourceFile>
+  <SourceTime>2016-04-06T15:20:46+03:00</SourceTime>
+  <DestFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/bin/Windows/audio/bonusSound.xnb</DestFile>
+  <DestTime>2016-10-06T13:33:39.6946744+03:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2016-03-30T09:36:08+03:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2016-03-30T09:36:08+03:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

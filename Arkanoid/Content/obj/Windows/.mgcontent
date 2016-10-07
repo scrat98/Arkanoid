@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/bonusSound.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/bounce.ogg</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/button.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/death.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/pauseIn.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/pauseOut.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/rocket.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/rocketDeath.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/Font/Font.spritefont</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/Font/Font1.spritefont</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/ball.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/board.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/bonus.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/border.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/BoxOnAnimation.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/breaks.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/ContinueAnimation.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/cursor.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/ExitAnimation.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/GameOver.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/health.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/NewGameAnimation.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/paper.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/Pause.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/button1.wav</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/levelCompleted.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/music.mp3</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/newLevel.mp3</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/WinGame.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/end.mp3</File>
+  </SourceFiles>
+</SourceFileCollection>

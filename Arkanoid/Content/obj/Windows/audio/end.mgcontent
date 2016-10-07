@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/end.mp3</SourceFile>
+  <SourceTime>2013-04-10T20:17:51.5338829+04:00</SourceTime>
+  <DestFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/bin/Windows/audio/end.xnb</DestFile>
+  <DestTime>2016-10-06T13:34:06.3587601+03:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2016-03-30T09:36:08+03:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2016-03-30T09:36:08+03:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/bin/Windows/audio/end.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>
