@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/WinGame.png</SourceFile>
-  <SourceTime>2016-10-06T00:46:28.912813+03:00</SourceTime>
-  <DestFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/bin/Windows/images/WinGame.xnb</DestFile>
-  <DestTime>2016-10-08T23:01:34.3727848+03:00</DestTime>
+  <SourceFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/rocket.png</SourceFile>
+  <SourceTime>2016-10-08T22:57:48.7929685+03:00</SourceTime>
+  <DestFile>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/bin/Windows/images/rocket.xnb</DestFile>
+  <DestTime>2016-10-08T23:01:37.8966084+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T09:36:08+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -10,7 +10,6 @@
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/death.wav</File>
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/pauseIn.wav</File>
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/pauseOut.wav</File>
-    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/rocket.wav</File>
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/rocketDeath.wav</File>
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/Font/Font.spritefont</File>
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/Font/Font1.spritefont</File>
@@ -34,5 +33,7 @@
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/newLevel.mp3</File>
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/WinGame.png</File>
     <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/end.mp3</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/images/rocket.png</File>
+    <File>C:/Users/user/Documents/Visual Studio 2015/Projects/Arkanoid/Arkanoid/Content/audio/rocketStart.wav</File>
   </SourceFiles>
 </SourceFileCollection>

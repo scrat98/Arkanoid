@@ -14,7 +14,7 @@ namespace Arkanoid
     {
         public readonly Game game;
 
-        List<Entity> entities = new List<Entity>();
+        public List<Entity> entities = new List<Entity>();
         List<Entity> toKill = new List<Entity>();
         List<Entity> addBonus = new List<Entity>();
 
@@ -392,8 +392,11 @@ namespace Arkanoid
 
         public virtual void Kill(Entity entity)
         {
-            toKill.Add(entity);
-            if (entity is Breaks && entity.type != 5) kill++;
+            if (!toKill.Contains(entity)) //костыль. проверяем, мало ли мы уже убили этот блок, ибо убивает и шар и ракета
+            {
+                toKill.Add(entity);
+                if (entity is Breaks && entity.type != 5) kill++;
+            }
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)

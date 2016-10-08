@@ -55,6 +55,7 @@
     <Compile Include="Pause.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rocket.cs" />
     <Compile Include="Score.cs" />
     <Compile Include="WinGame.cs" />
     <Compile Include="World.cs" />

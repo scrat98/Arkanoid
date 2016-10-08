@@ -14,6 +14,12 @@ namespace Arkanoid
         public Texture2D hp;
         public int len;
         public float bonusTime; //as Milliseconds
+        public float rocketTime; //as Milliseconds
+        public bool haveRocket;
+        const float timeToRocket = 500f;
+
+        public List<Rocket> rockets = new List<Rocket>();
+        public List<Rocket> Killrockets = new List<Rocket>();
 
         public Board(World world, int type) : base(world, type)
         {
@@ -25,8 +31,26 @@ namespace Arkanoid
             bonusTime = -1;
         }
 
+        public void Fire()
+        {
+            rocketTime = 0;
+            rockets.Add(new Rocket(this.world, this));
+            haveRocket = true;
+        }
+
         public override void Update(GameTime gameTime)
         {
+            if (type == 2) //FIRE!!!!
+            {
+                if (rocketTime >= timeToRocket && !haveRocket) Fire();
+                if(!haveRocket) rocketTime += gameTime.ElapsedGameTime.Milliseconds;
+            }
+
+            foreach (var r in rockets) r.Update(gameTime);
+
+            rockets.RemoveAll(e => Killrockets.Contains(e));
+            Killrockets.Clear();
+
             Width = 32 * len;
 
             MouseState mouse = Mouse.GetState();
@@ -46,6 +70,7 @@ namespace Arkanoid
             for (int i = 0; i < Health; i++)
                 spriteBatch.Draw(hp, new Vector2(20 + i*hp.Width/2, 20), Color.White);
 
+            foreach (var r in rockets) r.Draw(gameTime, spriteBatch);
 
             base.Draw(gameTime, spriteBatch);
         }
@@ -149,12 +174,15 @@ namespace Arkanoid
                 if (world.ball.speed < 100) world.ball.speed = 100;
             }
 
-            //!!!!!
             if (other.type == 12) //ракетница
             {
                 type = 2;
                 world.ball.type = 2;
                 world.x = 1;
+
+                rocketTime = timeToRocket;
+                haveRocket = false;
+                Killrockets.Clear();
 
                 world.Time = 0;
                 bonusTime = 10000f;
@@ -169,6 +197,7 @@ namespace Arkanoid
             {
                 world.board.Health++;
             }
+            world.score += 100; //за каждый бонус + 100 очков
             world.Kill(other);
         }
 

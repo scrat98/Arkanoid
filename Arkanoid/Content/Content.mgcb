@@ -49,12 +49,6 @@
 /processorParam:Quality=Best
 /build:audio/pauseOut.wav
 
-#begin audio/rocket.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:audio/rocket.wav
-
 #begin audio/rocketDeath.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -288,4 +282,22 @@
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:audio/end.mp3
+
+#begin images/rocket.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/rocket.png
+
+#begin audio/rocketStart.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/rocketStart.wav
 
