@@ -80,7 +80,7 @@ namespace Arkanoid
             if(world.EffectsOn) world.bonus.Play(0.4f, 0f, 0f);
             if (other.type == 0) //инверсия движения
             {
-                world.ball.type = 3;
+                foreach(var ball in world.balls) ball.type = 3;
                 type = 3;
                 world.x = 1;
 
@@ -91,7 +91,7 @@ namespace Arkanoid
             if(other.type == 1) //магнит
             {
                 type = 1;
-                world.ball.type = 1;
+                foreach (var ball in world.balls) ball.type = 1;
                 world.x = 1;
 
                 world.Time = 0;
@@ -100,18 +100,24 @@ namespace Arkanoid
 
             if (other.type == 2) //увеличение мяча
             {
-                world.ball.scale.X += 1;
-                world.ball.scale.Y += 1;
+                foreach (var ball in world.balls)
+                {
+                    ball.scale.X += 1;
+                    ball.scale.Y += 1;
 
-                if (world.ball.scale.X > 3) world.ball.scale = new Vector2(3, 3);
+                    if (ball.scale.X > 3) ball.scale = new Vector2(3, 3);
+                }
             }
 
             if (other.type == 3) //уменьшение мяча
             {
-                world.ball.scale.X -= 1;
-                world.ball.scale.Y -= 1;
+                foreach (var ball in world.balls)
+                {
+                    ball.scale.X -= 1;
+                    ball.scale.Y -= 1;
 
-                if (world.ball.scale.X < 1) world.ball.scale = new Vector2(1, 1);
+                    if (ball.scale.X < 1) ball.scale = new Vector2(1, 1);
+                }
             }
 
             if (other.type == 4) //увеличение борда
@@ -128,7 +134,7 @@ namespace Arkanoid
 
             if (other.type == 6) //супер шар 
             {
-                world.ball.type = 4;
+                foreach (var ball in world.balls) ball.type = 4;
                 type = 0;
                 world.x = 1;
 
@@ -138,7 +144,7 @@ namespace Arkanoid
 
             if (other.type == 7) //шар призрак
             {
-                world.ball.type = 5;
+                foreach (var ball in world.balls) ball.type = 5;
                 type = 0;
                 world.x = 1;
 
@@ -146,15 +152,24 @@ namespace Arkanoid
                 bonusTime = 4000f;
             }
 
-            //!!!!!
+            
             if (other.type == 8) //+2 шарика от каждого шарика 
             {
-
+               foreach (var ball in world.balls)
+               {
+                   for (int i = 0; i < 2; i++)
+                   {
+                       Ball b = ball.DeepCopy();
+                       b.dirX = (float)world.r.Next(12345);
+                       b.dirY = (float)world.r.Next(12345);
+                       world.addBalls.Add(b);
+                    }
+                }
             }
 
             if (other.type == 9) //2й опыт
             {
-                world.ball.type = 0;
+                foreach (var ball in world.balls) ball.type = 0;
                 type = 0;
                 world.x = 2;
 
@@ -164,20 +179,26 @@ namespace Arkanoid
 
             if (other.type ==10) //увеличение скорости мяча 
             {
-                world.ball.speed *= 1.5f;
-                if (world.ball.speed > 1200) world.ball.speed = 1200;
+                foreach (var ball in world.balls)
+                {
+                    ball.speed *= 1.5f;
+                    if (ball.speed > 1200) ball.speed = 1200;
+                }
             }
 
             if (other.type == 11) //уменьшение скорости мяча 
             {
-                world.ball.speed /= 1.5f;
-                if (world.ball.speed < 100) world.ball.speed = 100;
+                foreach (var ball in world.balls)
+                {
+                    ball.speed /= 1.5f;
+                    if (ball.speed < 100) ball.speed = 100;
+                }
             }
 
             if (other.type == 12) //ракетница
             {
                 type = 2;
-                world.ball.type = 2;
+                foreach (var ball in world.balls) ball.type = 2;
                 world.x = 1;
 
                 rocketTime = timeToRocket;

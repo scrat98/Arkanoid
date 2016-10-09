@@ -69,8 +69,10 @@ namespace Arkanoid
             bonus[0, 3] = 3;
             bonus[0, 4] = 5;
             bonus[0, 10] = 3;
+            bonus[0, 8] = 10;
+            bonus[0, 12] = 5;
 
-          arr[1].field = new string[] {
+            arr[1].field = new string[] {
             "                      ",
             "                      ",
             "                      ",
@@ -222,7 +224,7 @@ namespace Arkanoid
             bonus[5, 3] = 4;
             bonus[5, 6] = 1;
             bonus[5, 12] = 3;
-
+            bonus[0, 8] = 3;
 
             arr[6].field = new string[] {
             "                      ",
@@ -252,6 +254,7 @@ namespace Arkanoid
             bonus[6, 9] = 10;
             bonus[6, 10] = 10;
             bonus[6, 14] = 2;
+            bonus[0, 8] = 2;
 
           arr[7].field = new string[] {
             "                      ",
@@ -310,6 +313,7 @@ namespace Arkanoid
             bonus[8, 1] = 2;
             bonus[8, 6] = 2;
             bonus[8, 13] = 6;
+            bonus[0, 8] = 4;
 
             arr[9].field = new string[] {
             "                      ",
@@ -396,6 +400,7 @@ namespace Arkanoid
           arr[11].countBreaks = 152;
             bonus[11, 13] = 100;
             bonus[11, 14] = 2;
+            bonus[0, 8] = 4;
 
             arr[12].field = new string[] {
             "                      ",

@@ -62,7 +62,8 @@ namespace Arkanoid
             Width = (int)scale.X * 8;
             Height = (int)scale.Y * 8;
 
-            Switch();
+            if (!on) Switch(); 
+                else acc = true;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -118,7 +119,7 @@ namespace Arkanoid
                     Breaks b = (Breaks)other;
 
                     world.score += world.add * world.x;
-                    b.Damage();
+                    b.Damage(this);
                     if (world.EffectsOn) world.bounce.Play(0.4f, 0f, 0f);
                     if (type != 4)
                     {
@@ -233,6 +234,11 @@ namespace Arkanoid
                 return true;
 
             return false;
+        }
+
+        public Ball DeepCopy()
+        {
+            return (Ball)this.MemberwiseClone();
         }
     }
 }

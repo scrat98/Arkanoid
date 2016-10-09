@@ -100,7 +100,6 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Window
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\audio\newLevel.xnb
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\audio\pauseIn.xnb
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\audio\pauseOut.xnb
-C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\audio\rocket.xnb
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\audio\rocketDeath.xnb
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\Font\Font.xnb
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\Font\Font1.xnb
@@ -143,3 +142,5 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Window
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\SharpDX.RawInput.xml
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\obj\x86\Debug\Arkanoid.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\audio\rocketStart.xnb
+C:\Users\user\Documents\Visual Studio 2015\Projects\Arkanoid\Arkanoid\bin\Windows\x86\Debug\Content\images\rocket.xnb

@@ -34,7 +34,7 @@ namespace Arkanoid
             base.Draw(gameTime, spriteBatch);
         }
 
-        public void Damage()
+        public void Damage(Ball ball)
         {
             Health --;
             if (type == 5 && Health <= 0) //неубиваемый блок
@@ -43,7 +43,7 @@ namespace Arkanoid
                 world.score -= world.add * world.x;
             }
 
-            if (world.ball.type == 4) Health = 0; //супер шар
+            if (ball.type == 4) Health = 0; //супер шар
             if (Health <= 0)
             {
                 if (bonus != -1) 

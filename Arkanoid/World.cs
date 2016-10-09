@@ -35,7 +35,10 @@ namespace Arkanoid
         public KeyboardState oldStateKey;
         public MouseState oldStateMouseMove;
 
-        public Ball ball;
+        public List<Ball> balls = new List<Ball>();
+        public List<Ball> killBalls = new List<Ball>();
+        public List<Ball> addBalls = new List<Ball>();
+
         public Cursor cursor;
         public Board board;
         public Score scoreTxt;
@@ -93,20 +96,29 @@ namespace Arkanoid
 
         public void damageHealth()
         {
-            if(ball.Position.Y >= 560)
+            foreach (var ball in balls)
+            {
+                if (ball.Position.Y >= 560)
+                {
+                    killBalls.Add(ball);
+                }
+            }
+
+            balls.RemoveAll(e => killBalls.Contains(e));
+            killBalls.Clear();
+
+            if (balls.Count == 0)
             {
                 board.Health--;
                 board.type = 0;
                 board.len = 2;
 
-                ball.type = 0;
-                ball.scale = new Vector2(1, 1);
-                ball.speed = 400f;
-                ball.on = false;
+                Ball ball = new Ball(this, 0);
+                balls.Add(ball);
 
                 x = 1;
 
-                if(EffectsOn) death.Play(0.4f, 0f, 0f);
+                if (EffectsOn) death.Play(0.4f, 0f, 0f);
             }
 
             if(board.Health == 0)
@@ -259,8 +271,10 @@ namespace Arkanoid
                 else board = (Board)Spawn(typeof(Board).FullName, new Vector2(Mouse.GetState().Position.X, 530), 0, board.Health);
 
             //board = (Board)Spawn(typeof(Board).FullName, new Vector2(Mouse.GetState().Position.X, 530), 0, 3);
-            ball = new Ball(this, 0); 
+            balls.Clear();
+            Ball ball = new Ball(this, 0); 
             ball.d = r.Next(0, board.Width);
+            balls.Add(ball);
         }
 
         public void WinGame()
@@ -344,9 +358,9 @@ namespace Arkanoid
                                 if (board.bonusTime != -1) Time += gameTime.ElapsedGameTime.Milliseconds;
                                 if (Time > board.bonusTime && board.bonusTime != -1)
                                 {
+                                    foreach(var ball in balls) ball.type = 0;
                                     x = 1;
                                     board.type = 0;
-                                    ball.type = 0;
                                     Time = 0;
                                 }
 
@@ -357,15 +371,25 @@ namespace Arkanoid
 
                                 foreach (var a in entities)
                                 {
-                                    if (ball.on)
-                                        if (ball.Collides(a))
-                                            ball.Touch(a);
+                                    foreach (var ball in balls)
+                                    {
+                                        if (ball.on)
+                                            if (ball.Collides(a))
+                                                ball.Touch(a);
+                                    }
 
                                     if (board.Collides(a) && a is Bonus)
                                         board.Touch(a);
                                 }
 
-                                ball.Update(gameTime, board);
+                                foreach (var ball in addBalls)
+                                {
+                                    balls.Add(ball);
+                                }
+                                addBalls.Clear();
+
+                                foreach (var ball in balls) 
+                                    ball.Update(gameTime, board);
                                 damageHealth();
 
                                 entities.RemoveAll(e => toKill.Contains(e));
@@ -409,7 +433,7 @@ namespace Arkanoid
                     entity.Draw(gameTime, spriteBatch);
                 }
 
-                ball.Draw(gameTime, spriteBatch);
+                foreach(var ball in balls) ball.Draw(gameTime, spriteBatch);
                 scoreTxt.Draw(spriteBatch, score);
                 levelTxt.Draw(spriteBatch);
 
